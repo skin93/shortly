@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const size = {
   mobile: "375px",
@@ -37,10 +38,21 @@ body {
 	line-height: 1;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
+    min-height: 100vh;
 }
   ol, ul {
 	list-style: none;
 }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 325px;
+  margin-inline: auto;
+
+  @media ${theme.device.desktop} {
+    max-width: 1180px;
+  }
 `;
 
 export { GlobalStyle, theme };
