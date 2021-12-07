@@ -17,9 +17,9 @@ const theme = {
     },
     neutral: {
       gray: "hsl(0, 0%, 75%)",
-      grayIshViolet: "hsl(257, 7%, 63%)",
+      grayIsViolet: "hsl(257, 7%, 63%)",
       veryDarkBlue: "hsl(255, 11%, 22%)",
-      beryDarkViolet: "hsl(260, 8%, 14%)",
+      veryDarkViolet: "hsl(260, 8%, 14%)",
     },
   },
   device: {

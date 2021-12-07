@@ -16,5 +16,5 @@ export const StyledHamburger = styled.div`
 export const Element = styled.div`
   width: 100%;
   height: 3px;
-  background-color: ${(props) => props.theme.colors.neutral.grayIshViolet};
+  background-color: ${(props) => props.theme.colors.neutral.grayIsViolet};
 `;

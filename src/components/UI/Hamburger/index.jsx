@@ -1,8 +1,8 @@
 import { StyledHamburger, Element } from "./Hamburger.styled";
 
-export default function Hamburger() {
+export default function Hamburger({ handleClick }) {
   return (
-    <StyledHamburger>
+    <StyledHamburger onClick={handleClick}>
       <Element />
       <Element />
       <Element />
