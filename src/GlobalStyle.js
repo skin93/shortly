@@ -17,7 +17,7 @@ const theme = {
     },
     neutral: {
       gray: "hsl(0, 0%, 75%)",
-      grayishViolet: "hsl(257, 7%, 63%)",
+      grayIshViolet: "hsl(257, 7%, 63%)",
       veryDarkBlue: "hsl(255, 11%, 22%)",
       beryDarkViolet: "hsl(260, 8%, 14%)",
     },
@@ -25,6 +25,14 @@ const theme = {
   device: {
     mobile: `(min-width: ${size.mobile})`,
     desktop: `(min-width: ${size.desktop})`,
+  },
+  typography: {
+    poppins500: ` font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;`,
+    poppins700: ` font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;`,
   },
 };
 
@@ -36,9 +44,10 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
 	line-height: 1;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    ${theme.typography.poppins500};
+    color: ${theme.colors.neutral.gray};
     min-height: 100vh;
+    padding-top: 40px;
 }
   ol, ul {
 	list-style: none;
