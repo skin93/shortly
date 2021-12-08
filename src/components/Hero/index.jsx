@@ -13,10 +13,10 @@ import { Container } from "GlobalStyle";
 export default function HeroSection() {
   return (
     <StyledSection>
-      <ImgWrapper>
-        <Img src={illustration} alt="illustration" />
-      </ImgWrapper>
       <Container>
+        <ImgWrapper>
+          <Img src={illustration} alt="illustration" />
+        </ImgWrapper>
         <HeroContent>
           <HeroHead>More than just shorter links</HeroHead>
           <HeroDesc>

@@ -54,12 +54,15 @@ body {
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  max-width: 325px;
+  width: 86vw;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
 
   @media ${theme.device.desktop} {
-    max-width: 1180px;
+    width: 82vw;
+    flex-direction: row;
+    align-items: center;
   }
 `;
 
