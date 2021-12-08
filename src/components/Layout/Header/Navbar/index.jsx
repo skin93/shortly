@@ -1,4 +1,8 @@
-import { StyledNav, Menu, MenuItem, Buttons, Button } from "./Navbar.styled";
+import {
+  PrimaryButton,
+  SecondaryButton,
+} from "components/UI/Button/Button.styled";
+import { StyledNav, Menu, MenuItem, Buttons } from "./Navbar.styled";
 
 export default function Navbar() {
   return (
@@ -9,8 +13,8 @@ export default function Navbar() {
         <MenuItem>Resources</MenuItem>
       </Menu>
       <Buttons>
-        <Button type="login">Login</Button>
-        <Button type="signup">Sign Up</Button>
+        <SecondaryButton>Login</SecondaryButton>
+        <PrimaryButton>Sign Up</PrimaryButton>
       </Buttons>
     </StyledNav>
   );

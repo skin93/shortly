@@ -21,7 +21,13 @@ export const Menu = styled.ul`
   ${({ theme }) => theme.typography.poppins700};
 `;
 
-export const MenuItem = styled.li``;
+export const MenuItem = styled.li`
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.neutral.grayIsViolet};
+  &:hover {
+    color: #000;
+  }
+`;
 
 export const Buttons = styled.div`
   display: inline-flex;

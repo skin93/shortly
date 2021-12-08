@@ -1,10 +1,13 @@
-import { MenuItem } from "../Navbar/Navbar.styled";
 import {
-  Button,
+  PrimaryButton,
+  SecondaryButton,
+} from "components/UI/Button/Button.styled";
+import {
   Buttons,
   Divider,
   Menu,
   StyledNav,
+  MenuItem,
 } from "./MobileNavbar.styled";
 
 export default function MobileNavbar({ open }) {
@@ -17,8 +20,8 @@ export default function MobileNavbar({ open }) {
       </Menu>
       <Divider />
       <Buttons>
-        <Button type="login">Login</Button>
-        <Button type="signup">Sign Up</Button>
+        <SecondaryButton style={{ color: "#fff" }}>Login</SecondaryButton>
+        <PrimaryButton>Sign Up</PrimaryButton>
       </Buttons>
     </StyledNav>
   );

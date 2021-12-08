@@ -24,7 +24,9 @@ export const Menu = styled.ul`
   ${({ theme }) => theme.typography.poppins700};
 `;
 
-export const MenuItem = styled.li``;
+export const MenuItem = styled.li`
+  color: #fff;
+`;
 
 export const Buttons = styled.div`
   display: inline-flex;
