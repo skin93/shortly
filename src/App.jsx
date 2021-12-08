@@ -1,5 +1,11 @@
+import HeroSection from "components/Hero";
+
 function App() {
-  return <div className="App">App component</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
 
 export default App;

@@ -28,10 +28,8 @@ const theme = {
   },
   typography: {
     poppins500: ` font-family: 'Poppins', sans-serif;
-    font-size: 18px;
     font-weight: 500;`,
     poppins700: ` font-family: 'Poppins', sans-serif;
-    font-size: 18px;
     font-weight: 700;`,
   },
 };
@@ -45,9 +43,10 @@ const GlobalStyle = createGlobalStyle`
 body {
 	line-height: 1;
     ${theme.typography.poppins500};
-    color: ${theme.colors.neutral.gray};
+    overflow-x: hidden;
     min-height: 100vh;
     padding-top: 40px;
+    font-size: 18px;
 }
   ol, ul {
 	list-style: none;

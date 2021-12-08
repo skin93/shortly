@@ -7,6 +7,8 @@ const StyledButton = styled.button`
   ${({ theme }) => theme.typography.poppins700}
   border: none;
   border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
 
   @media ${({ theme }) => theme.device.desktop} {
     width: 120px;
