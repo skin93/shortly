@@ -8,10 +8,9 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 30px;
   font-size: 18px;
-  font-weight: 500;
 
   @media ${({ theme }) => theme.device.desktop} {
-    width: 120px;
+    width: 190px;
   }
 `;
 
@@ -19,7 +18,7 @@ export const PrimaryButton = styled(StyledButton)`
   background-color: ${(props) => props.theme.colors.primary.cyan};
   color: #fff;
   &:hover {
-    opacity: 0.6;
+    background-color: hsl(180, 66%, 69%);
   }
 `;
 

@@ -1,16 +1,6 @@
 import { PrimaryButton } from "components/UI/Button/Button.styled";
 import styled from "styled-components";
 
-export const StyledSection = styled.section`
-  margin-top: 30px;
-  position: relative;
-  overflow-x: hidden;
-
-  @media ${({ theme }) => theme.device.desktop} {
-    margin-top: 100px;
-  }
-`;
-
 export const ImgWrapper = styled.div`
   width: 500px;
   position: relative;
@@ -44,8 +34,10 @@ export const HeroContent = styled.div`
 export const HeroHead = styled.h1`
   font-size: 2rem;
   margin-top: 30px;
+  color: ${({ theme }) => theme.colors.neutral.veryDarkViolet};
 
   @media ${({ theme }) => theme.device.desktop} {
+    margin-top: 0;
     font-size: 4rem;
   }
 `;

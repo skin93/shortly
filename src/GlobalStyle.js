@@ -60,9 +60,19 @@ export const Container = styled.div`
   flex-direction: column;
 
   @media ${theme.device.desktop} {
-    width: 82vw;
+    width: 77vw;
     flex-direction: row;
     align-items: center;
+  }
+`;
+
+export const StyledSection = styled.section`
+  padding-block: 30px;
+  position: relative;
+  overflow-x: hidden;
+
+  @media ${theme.device.desktop} {
+    padding-block: 50px;
   }
 `;
 

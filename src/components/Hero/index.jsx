@@ -5,10 +5,10 @@ import {
   HeroHead,
   Img,
   ImgWrapper,
-  StyledSection,
 } from "./Header.styled";
+
 import illustration from "assets/illustration-working.svg";
-import { Container } from "GlobalStyle";
+import { Container, StyledSection } from "GlobalStyle";
 
 export default function HeroSection() {
   return (
