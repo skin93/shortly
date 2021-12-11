@@ -5,6 +5,10 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./GlobalStyle";
 import Layout from "components/Layout";
+import axios from "axios";
+
+axios.defaults.baseURL = "https://api.shrtco.de/v2/";
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
 ReactDOM.render(
   <React.StrictMode>

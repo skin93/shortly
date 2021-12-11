@@ -66,7 +66,7 @@ export const Container = styled.div`
   }
 `;
 
-export const StyledSection = styled.section`
+export const Section = styled.section`
   padding-block: 30px;
   position: relative;
   overflow-x: hidden;

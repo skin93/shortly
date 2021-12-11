@@ -8,11 +8,11 @@ import {
 } from "./Header.styled";
 
 import illustration from "assets/illustration-working.svg";
-import { Container, StyledSection } from "GlobalStyle";
+import { Container, Section } from "GlobalStyle";
 
 export default function HeroSection() {
   return (
-    <StyledSection>
+    <Section>
       <Container>
         <ImgWrapper>
           <Img src={illustration} alt="illustration" />
@@ -26,6 +26,6 @@ export default function HeroSection() {
           <HeroBtn>Get started</HeroBtn>
         </HeroContent>
       </Container>
-    </StyledSection>
+    </Section>
   );
 }

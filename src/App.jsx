@@ -1,4 +1,4 @@
-import Form from "components/Form";
+import Links from "components/Links";
 import HeroSection from "components/Hero";
 // import StatisticsSection from "components/Statistics";
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <HeroSection />
-      <Form />
+      <Links />
       {/* <StatisticsSection /> */}
     </>
   );

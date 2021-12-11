@@ -26,33 +26,48 @@ export const StyledForm = styled.form`
 
 export const FormGroup = styled.div`
   width: 100%;
-  /* align-items: center; */
+  position: relative;
 `;
 
 export const Label = styled.label``;
 
 export const Input = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 18px;
   ${({ theme }) => theme.typography.poppins500};
-  color: ${({ theme }) => theme.colors.neutral.gray};
-  border: 0;
-  border-radius: 5px;
 
-  &:focus {
-    outline: none;
+  border: ${({ error, theme }) =>
+    error ? `4px solid ${theme.colors.secondary.red}` : 0};
+
+  &::placeholder {
+    color: ${({ theme, error }) =>
+      error ? theme.colors.secondary.red : theme.colors.neutral.gray};
+
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   @media ${({ theme }) => theme.device.desktop} {
-    padding: 15px;
+    padding: 10px 20px;
   }
+`;
+
+export const Error = styled.p`
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  font-style: italic;
+  color: ${({ theme }) => theme.colors.secondary.red};
 `;
 
 export const Button = styled(PrimaryButton)`
   border-radius: 5px;
 
   @media ${({ theme }) => theme.device.desktop} {
-    padding-block: 15px;
+    padding: 10px 20px;
   }
 `;
