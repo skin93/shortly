@@ -8,19 +8,20 @@ export const StyledForm = styled.form`
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  height: 162px;
+  min-height: 162px;
   border-radius: 10px;
   padding: 25px;
   gap: 15px;
 
   background-color: ${({ theme }) => theme.colors.primary.darkViolet};
-  background-image: url(${bgBoostDesk});
+  background-image: url(${bgBoostMobile});
 
   @media ${({ theme }) => theme.device.desktop} {
     flex-direction: row;
     padding-inline: 65px;
     gap: 22px;
     align-items: center;
+    background-image: url(${bgBoostDesk});
   }
 `;
 
@@ -57,11 +58,15 @@ export const Input = styled.input`
 `;
 
 export const Error = styled.p`
-  position: absolute;
-  bottom: -25px;
-  left: 0;
+  position: block;
   font-style: italic;
   color: ${({ theme }) => theme.colors.secondary.red};
+
+  @media ${({ theme }) => theme.device.desktop} {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+  }
 `;
 
 export const Button = styled(PrimaryButton)`
