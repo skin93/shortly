@@ -22,17 +22,36 @@ export default function Form() {
   const [links, setLinks] = useState([]);
   const [error, setError] = useState("");
 
-  const handleClick = (e) => {
-    e.target.classList.add("copied");
-    e.target.innerText = "Copied!";
+  const isValidHttpUrl = (string) => {
+    let url;
+
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;
+    }
+
+    return url.protocol === "https:";
+  };
+
+  const handleClick = async (e) => {
+    try {
+      navigator.clipboard.writeText(e.target.previousSibling.innerText);
+      e.target.classList.add("copied");
+      e.target.innerText = "Copied!";
+    } catch (err) {
+      setError(err);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (input === "") {
+
+    if (!isValidHttpUrl(input)) {
       setError("Please add a link");
       return;
     }
+
     try {
       const res = await axios.post(`/shorten?url=${input}`);
       const result = await res.data.result;
@@ -44,7 +63,7 @@ export default function Form() {
       setInput("");
       setError("");
     } catch (err) {
-      console.log(err.message);
+      setError("Somethin went wrong");
     }
   };
 
