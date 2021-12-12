@@ -7,10 +7,19 @@ export const StyledSection = styled(Section)`
   flex-direction: column;
 `;
 
+export const StyledContainer = styled(Container)`
+  position: absolute;
+  top: -80px;
+`;
+
 export const LinksContainer = styled(Container)`
   flex-direction: column;
-  margin-block: 20px;
+  margin-block: -50px 50px;
   gap: 10px;
+
+  @media ${({ theme }) => theme.device.desktop} {
+    margin-block: -50px 100px;
+  }
 `;
 
 export const LinkWrapper = styled.div`
@@ -19,7 +28,7 @@ export const LinkWrapper = styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: #fff;
 
   @media ${({ theme }) => theme.device.desktop} {
     flex-direction: row;
@@ -45,6 +54,7 @@ export const ShortLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-block: 10px;
+
   @media ${({ theme }) => theme.device.desktop} {
     flex-basis: 30%;
     flex-direction: row;

@@ -1,4 +1,5 @@
 import {
+  StyledContainer,
   StyledDiv,
   StyledSection,
   Header,
@@ -9,7 +10,7 @@ import {
   ImgWrapper,
   Img,
 } from "./Statistics.styled";
-import { Container } from "GlobalStyle";
+import Links from "components/Links";
 import iconBrand from "assets/icon-brand-recognition.svg";
 import iconDetailed from "assets/icon-detailed-records.svg";
 import iconFully from "assets/icon-fully-customizable.svg";
@@ -17,8 +18,9 @@ import iconFully from "assets/icon-fully-customizable.svg";
 export default function StatisticsSection() {
   return (
     <StyledSection>
-      <Container>
+      <StyledContainer>
         <StyledDiv></StyledDiv>
+        <Links />
         <Header>
           <h3>Advanced Statistics</h3>
           <p>
@@ -59,7 +61,7 @@ export default function StatisticsSection() {
             </Desc>
           </Statistic>
         </Statistics>
-      </Container>
+      </StyledContainer>
     </StyledSection>
   );
 }

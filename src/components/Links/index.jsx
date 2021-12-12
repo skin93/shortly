@@ -14,6 +14,7 @@ import {
   OriginalLink,
   ShortLink,
   ShortLinkWrapper,
+  StyledContainer,
 } from "./Links.styled";
 import axios from "axios";
 
@@ -68,8 +69,8 @@ export default function Form() {
   };
 
   return (
-    <Section>
-      <Container>
+    <>
+      <StyledContainer>
         <StyledForm onSubmit={handleSubmit}>
           <FormGroup style={{ flexBasis: "80%" }}>
             <Input
@@ -84,7 +85,7 @@ export default function Form() {
           </FormGroup>
           <Button style={{ flexBasis: "20%" }}>Shorten It!</Button>
         </StyledForm>
-      </Container>
+      </StyledContainer>
       <LinksContainer>
         {links?.length > 0 &&
           links.map((link, index) => (
@@ -97,6 +98,6 @@ export default function Form() {
             </LinkWrapper>
           ))}
       </LinksContainer>
-    </Section>
+    </>
   );
 }

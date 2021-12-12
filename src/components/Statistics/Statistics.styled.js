@@ -1,13 +1,15 @@
+import { Container } from "GlobalStyle";
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
   position: relative;
-  top: -150px;
-  z-index: -1;
+  margin-top: 100px;
   background: hsl(230, 25%, 95%);
+`;
 
+export const StyledContainer = styled(Container)`
   @media ${({ theme }) => theme.device.desktop} {
-    margin-top: 100px;
+    flex-direction: column;
   }
 `;
 
@@ -29,6 +31,19 @@ export const Header = styled(StyledDiv)`
     line-height: 1.5;
     font-size: 16px;
     color: ${({ theme }) => theme.colors.neutral.gray};
+  }
+
+  @media ${({ theme }) => theme.device.desktop} {
+    align-items: center;
+    & > h3 {
+      font-size: 3rem;
+    }
+
+    & > p {
+      font-size: 18px;
+      width: 77%;
+      line-height: 1.8;
+    }
   }
 `;
 
@@ -54,6 +69,16 @@ export const Statistics = styled(StyledDiv)`
 
   @media ${({ theme }) => theme.device.desktop} {
     flex-direction: row;
+    gap: 30px;
+    margin-block: 40px 50px;
+    height: 550px;
+
+    &:before {
+      top: 30%;
+      right: 10%;
+      width: 90%;
+      height: 10px;
+    }
   }
 `;
 
@@ -61,11 +86,21 @@ export const Statistic = styled.div`
   position: relative;
   height: 270px;
   padding-inline: 20px;
-
   background: #fff;
-
   gap: 30px;
   text-align: center;
+
+  @media ${({ theme }) => theme.device.desktop} {
+    text-align: left;
+
+    &:nth-of-type(2) {
+      top: 10%;
+    }
+
+    &:nth-of-type(3) {
+      top: 20%;
+    }
+  }
 `;
 
 export const Name = styled.h3`
@@ -89,6 +124,11 @@ export const ImgWrapper = styled.div`
   width: 90px;
   height: 90px;
   border-radius: 50%;
+
+  @media ${({ theme }) => theme.device.desktop} {
+    left: 10px;
+    transform: translate(0);
+  }
 `;
 
 export const Img = styled.img`
