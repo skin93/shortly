@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import bgBoostDesk from "assets/bg-shorten-desktop.svg";
-import bgBoostMobile from "assets/bg-boost-mobile.svg";
+import bgShortenMobile from "assets/bg-shorten-mobile.svg";
 import { PrimaryButton } from "components/UI/Button/Button.styled";
 
 export const StyledForm = styled.form`
@@ -14,7 +14,10 @@ export const StyledForm = styled.form`
   gap: 15px;
 
   background-color: ${({ theme }) => theme.colors.primary.darkViolet};
-  background-image: url(${bgBoostMobile});
+  background-image: url(${bgShortenMobile});
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
   @media ${({ theme }) => theme.device.desktop} {
     flex-direction: row;

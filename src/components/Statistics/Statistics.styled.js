@@ -24,7 +24,7 @@ export const Header = styled(StyledDiv)`
   justify-content: space-around;
 
   & > h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   & > p {
@@ -103,7 +103,7 @@ export const Statistic = styled.div`
   }
 `;
 
-export const Name = styled.h3`
+export const Name = styled.h4`
   margin-top: -20px;
   font-size: 1.5rem;
 `;
