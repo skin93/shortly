@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Section, Container } from "GlobalStyle";
 import {
   FormGroup,
   Input,
